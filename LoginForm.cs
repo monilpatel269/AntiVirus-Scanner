@@ -65,7 +65,7 @@ namespace AntiVirus_Scanner
                             MessageBox.Show("Successfully Login");
                             Form1.instance.lbl.Text = "Hello " + tbUser.Text;
                             Form1.instance.btn.Text = "Logout";
-                            
+                            Form1.instance.btn1.Visible = false;
                             tbUser.Clear();
                             tbpass.Clear();
                             goto here;

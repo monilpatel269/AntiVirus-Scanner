@@ -15,7 +15,7 @@ namespace AntiVirus_Scanner
         public static Form1 instance;
         public Panel pn;
         public Button btn;
-        
+        public Button btn1;
         public Label lbl;
         public Form1()
         {
@@ -24,6 +24,7 @@ namespace AntiVirus_Scanner
             lbl = lblName;
             pn = mainPanel;
             btn = btnLogin;
+            btn1 = btnRegister;
             
         }
        public void loadform(object Form)

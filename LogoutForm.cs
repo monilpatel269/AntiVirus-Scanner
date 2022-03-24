@@ -48,7 +48,8 @@ namespace AntiVirus_Scanner
                 tbxPass.Clear();
                 btnLogout.Text = "Login";
                 Form1.instance.btn.Text = "Login";
-                Form1.instance.lbl.Text = "Hello User!"; 
+                Form1.instance.lbl.Text = "Hello User!";
+                Form1.instance.btn1.Visible = true;
                 if (btnLogout.Text == "Login")
                 {
                     loadform(new LoginForm());

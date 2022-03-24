@@ -113,7 +113,7 @@ namespace AntiVirus_Scanner
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(304, 196);
+            this.label6.Location = new System.Drawing.Point(302, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 28);
             this.label6.TabIndex = 5;
