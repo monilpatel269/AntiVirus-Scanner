@@ -112,7 +112,7 @@ namespace AntiVirus_Scanner
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(233, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Select hte folder you wish to scan.";
+            this.label5.Text = "Select the folder you wish to scan.";
             // 
             // label6
             // 

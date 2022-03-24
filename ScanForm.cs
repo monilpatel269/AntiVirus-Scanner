@@ -16,6 +16,7 @@ namespace AntiVirus_Scanner
     {
         int viruses;
         string folder;
+        
         public ScanForm()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace AntiVirus_Scanner
                 using (var stream = File.OpenRead(filename))
                 {
                     var hash = md5.ComputeHash(stream);
-                    return BitConverter.ToString(hash).Replace("-", "");
+                    return BitConverter.ToString(hash).Replace("-", "").ToLower();
                 }
             }
         }
@@ -41,20 +42,25 @@ namespace AntiVirus_Scanner
                 foreach (string item in search)
                 {
 
+                    List<string> mdList1 = new List<string>();
                     StreamReader stream = new StreamReader(item);
-                    string read = stream.ReadToEnd();
-                    string[] virus = new string[] { "trojan", "virus", "hacker", "malware", "spyware", "freeware", "RAT" };
-                    foreach (string st in virus)
-                    {
-                        if (Regex.IsMatch(read, st))
+                    string read = GetMD5Checksum(item);
+                    mdList1.Add(read);
+                    var virus = File.ReadAllLines("MD5.txt");
+                    foreach (string a in mdList1)
+                    { 
+                        foreach (string st in virus)
                         {
+                            if (Regex.IsMatch(a, st))
+                            {
 
-                            viruses += 1;
-                            label4.Text = "Viruses Detected:" + viruses.ToString();
-                            listBox1.Items.Add(item);
+                                viruses += 1;
+                                label4.Text = "Viruses Detected:" + viruses.ToString();
+                                listBox1.Items.Add(item);
+                            }
+                            progressBar1.Increment(1);
+
                         }
-                        progressBar1.Increment(1);
-
                     }
                 }
                 MessageBox.Show("Virus Detected!");
@@ -137,23 +143,30 @@ namespace AntiVirus_Scanner
             {
                 string[] search = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*");
                 progressBar2.Maximum = search.Length;
+                
                 foreach (string item in search)
                 {
-
+                    List<string> mdList = new List<string>();
                     StreamReader stream = new StreamReader(item);
-                    string read = stream.ReadToEnd();
-                    string[] virus = new string[] { "trojan", "virus", "hacker", "malware", "spyware", "freeware", "RAT" };
-                    foreach (string st in virus)
+                    string read = GetMD5Checksum(item);
+                    mdList.Add(read);
+
+                    var virus = File.ReadAllLines("MD5.txt");
+
+                    foreach (string a in mdList)
                     {
-                        if (Regex.IsMatch(read, st))
+                        foreach (string st in virus)
                         {
+                            if (Regex.IsMatch(a, st))
+                            {
 
-                            viruses += 1;
-                            label8.Text = "Viruses Detected:" + viruses.ToString();
-                            listBox1.Items.Add(item);
+                                viruses += 1;
+                                label8.Text = "Viruses Detected:" + viruses.ToString();
+                                listBox1.Items.Add(item);
+                            }
+                            progressBar2.Increment(1);
+
                         }
-                        progressBar2.Increment(1);
-
                     }
                 }
                 MessageBox.Show("Virus Detected!");

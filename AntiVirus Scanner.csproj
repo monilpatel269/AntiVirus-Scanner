@@ -153,5 +153,8 @@
   <ItemGroup>
     <None Include="Resources\black-gradient-blue copy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="MD5.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
