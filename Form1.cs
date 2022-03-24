@@ -13,12 +13,18 @@ namespace AntiVirus_Scanner
     public partial class Form1 : Form
     {
         public static Form1 instance;
+        public Panel pn;
+        public Button btn;
+        
         public Label lbl;
         public Form1()
         {
             InitializeComponent();
             instance = this;
             lbl = lblName;
+            pn = mainPanel;
+            btn = btnLogin;
+            
         }
        public void loadform(object Form)
         {
@@ -53,7 +59,15 @@ namespace AntiVirus_Scanner
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            loadform(new LoginForm());
+            if (btnLogin.Text == "Login")
+            {
+                loadform(new LoginForm());
+            }
+            else
+            {
+                loadform(new LogoutForm());
+            }
+            
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

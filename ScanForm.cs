@@ -20,12 +20,23 @@ namespace AntiVirus_Scanner
         {
             InitializeComponent();
         }
+        public static string GetMD5Checksum(string filename)
+        {
+            using (var md5 = System.Security.Cryptography.MD5.Create())
+            {
+                using (var stream = File.OpenRead(filename))
+                {
+                    var hash = md5.ComputeHash(stream);
+                    return BitConverter.ToString(hash).Replace("-", "");
+                }
+            }
+        }
 
         private void btnFullScan_Click(object sender, EventArgs e)
         {
             try
             {
-                string[] search = Directory.GetFiles(@"D:\STUDY", "*.*");
+                string[] search = Directory.GetFiles(@"D:\ASP.NET project\testfolder", "*.*", SearchOption.AllDirectories);
                 progressBar1.Maximum = search.Length;
                 foreach (string item in search)
                 {
