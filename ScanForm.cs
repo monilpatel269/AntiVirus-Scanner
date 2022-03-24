@@ -47,11 +47,11 @@ namespace AntiVirus_Scanner
                     string read = GetMD5Checksum(item);
                     mdList1.Add(read);
                     var virus = File.ReadAllLines("MD5.txt");
-                    foreach (string a in mdList1)
+                    foreach (string md in mdList1)
                     { 
                         foreach (string st in virus)
                         {
-                            if (Regex.IsMatch(a, st))
+                            if (Regex.IsMatch(md, st))
                             {
 
                                 viruses += 1;
@@ -153,13 +153,13 @@ namespace AntiVirus_Scanner
 
                     var virus = File.ReadAllLines("MD5.txt");
 
-                    foreach (string a in mdList)
+                    foreach (string md in mdList)
                     {
                         foreach (string st in virus)
                         {
-                            if (Regex.IsMatch(a, st))
+                            if (Regex.IsMatch(md, st))
                             {
-
+                                
                                 viruses += 1;
                                 label8.Text = "Viruses Detected:" + viruses.ToString();
                                 listBox1.Items.Add(item);
