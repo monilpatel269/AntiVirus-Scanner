@@ -76,9 +76,9 @@ namespace AntiVirus_Scanner
                     btnLogin.Text = "Logout";
                     if (btnLogin.Text == "Logout")
                     {
-                        loadform(new LogoutForm());
+                        loadform(new HomeForm());
                     }
-                    con.Close();
+                    
                 }
                 else
                 {

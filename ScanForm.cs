@@ -53,7 +53,6 @@ namespace AntiVirus_Scanner
                         {
                             if (Regex.IsMatch(md, st))
                             {
-
                                 viruses += 1;
                                 label4.Text = "Viruses Detected:" + viruses.ToString();
                                 listBox1.Items.Add(item);
@@ -159,7 +158,6 @@ namespace AntiVirus_Scanner
                         {
                             if (Regex.IsMatch(md, st))
                             {
-                                
                                 viruses += 1;
                                 label8.Text = "Viruses Detected:" + viruses.ToString();
                                 listBox1.Items.Add(item);

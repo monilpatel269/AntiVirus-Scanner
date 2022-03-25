@@ -66,7 +66,10 @@ namespace AntiVirus_Scanner
             }
             else
             {
-                loadform(new LogoutForm());
+                MessageBox.Show("Successfully Logout!");
+                lblName.Text = "Hello User!";
+                btnRegister.Visible = true;
+                btnLogin.Text = "Login";
             }
             
         }
