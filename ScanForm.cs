@@ -140,7 +140,7 @@ namespace AntiVirus_Scanner
         {
             try
             {
-                string[] search = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*");
+                string[] search = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*", SearchOption.AllDirectories);
                 progressBar2.Maximum = search.Length;
                 
                 foreach (string item in search)

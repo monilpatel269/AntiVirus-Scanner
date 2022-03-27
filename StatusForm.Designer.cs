@@ -126,7 +126,7 @@ namespace AntiVirus_Scanner
             this.lblCpu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCpu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblCpu.Location = new System.Drawing.Point(110, 301);
+            this.lblCpu.Location = new System.Drawing.Point(75, 301);
             this.lblCpu.Name = "lblCpu";
             this.lblCpu.Size = new System.Drawing.Size(60, 25);
             this.lblCpu.TabIndex = 6;
@@ -139,7 +139,7 @@ namespace AntiVirus_Scanner
             this.lblRam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblRam.Location = new System.Drawing.Point(108, 353);
+            this.lblRam.Location = new System.Drawing.Point(75, 353);
             this.lblRam.Name = "lblRam";
             this.lblRam.Size = new System.Drawing.Size(62, 25);
             this.lblRam.TabIndex = 7;
@@ -147,7 +147,7 @@ namespace AntiVirus_Scanner
             // 
             // prCPU
             // 
-            this.prCPU.Location = new System.Drawing.Point(194, 303);
+            this.prCPU.Location = new System.Drawing.Point(158, 301);
             this.prCPU.Name = "prCPU";
             this.prCPU.Size = new System.Drawing.Size(493, 23);
             this.prCPU.Step = 1;
@@ -155,7 +155,7 @@ namespace AntiVirus_Scanner
             // 
             // prRam
             // 
-            this.prRam.Location = new System.Drawing.Point(194, 355);
+            this.prRam.Location = new System.Drawing.Point(158, 355);
             this.prRam.Name = "prRam";
             this.prRam.Size = new System.Drawing.Size(493, 23);
             this.prRam.Step = 1;
@@ -168,7 +168,7 @@ namespace AntiVirus_Scanner
             this.lblCPUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCPUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblCPUp.Location = new System.Drawing.Point(693, 303);
+            this.lblCPUp.Location = new System.Drawing.Point(657, 299);
             this.lblCPUp.Name = "lblCPUp";
             this.lblCPUp.Size = new System.Drawing.Size(41, 25);
             this.lblCPUp.TabIndex = 10;
@@ -181,7 +181,7 @@ namespace AntiVirus_Scanner
             this.lblRamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRamp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblRamp.Location = new System.Drawing.Point(693, 355);
+            this.lblRamp.Location = new System.Drawing.Point(657, 355);
             this.lblRamp.Name = "lblRamp";
             this.lblRamp.Size = new System.Drawing.Size(41, 25);
             this.lblRamp.TabIndex = 11;
