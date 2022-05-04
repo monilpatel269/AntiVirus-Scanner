@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -62,6 +63,7 @@ namespace AntiVirus_Scanner
                         }
                     }
                 }
+                label9.Text = "Scanning Completed.";
                 MessageBox.Show("Virus Detected!");
             }
             catch(Exception ex)
@@ -142,7 +144,6 @@ namespace AntiVirus_Scanner
             {
                 string[] search = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*", SearchOption.AllDirectories);
                 progressBar2.Maximum = search.Length;
-                
                 foreach (string item in search)
                 {
                     List<string> mdList = new List<string>();
@@ -163,10 +164,10 @@ namespace AntiVirus_Scanner
                                 listBox1.Items.Add(item);
                             }
                             progressBar2.Increment(1);
-
                         }
                     }
                 }
+                label10.Text = "Scanning Completed.";
                 MessageBox.Show("Virus Detected!");
             }
             catch(Exception ex)
@@ -202,6 +203,14 @@ namespace AntiVirus_Scanner
 
         }
 
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar2.Value = e.ProgressPercentage;
+        }
     }
 }
 

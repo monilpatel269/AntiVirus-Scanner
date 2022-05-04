@@ -87,6 +87,7 @@ namespace AntiVirus_Scanner
             // 
             this.TbPass.Location = new System.Drawing.Point(252, 236);
             this.TbPass.Name = "TbPass";
+            this.TbPass.PasswordChar = '*';
             this.TbPass.Size = new System.Drawing.Size(243, 22);
             this.TbPass.TabIndex = 4;
             // 

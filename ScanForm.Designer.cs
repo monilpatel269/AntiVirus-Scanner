@@ -48,6 +48,8 @@ namespace AntiVirus_Scanner
             this.btnScan = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnScanDel = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -150,7 +152,7 @@ namespace AntiVirus_Scanner
             // progressBar2
             // 
             this.progressBar2.ForeColor = System.Drawing.Color.LimeGreen;
-            this.progressBar2.Location = new System.Drawing.Point(92, 415);
+            this.progressBar2.Location = new System.Drawing.Point(92, 430);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(449, 23);
             this.progressBar2.TabIndex = 8;
@@ -161,7 +163,7 @@ namespace AntiVirus_Scanner
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))));
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(88, 441);
+            this.label8.Location = new System.Drawing.Point(88, 456);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 20);
             this.label8.TabIndex = 9;
@@ -186,7 +188,7 @@ namespace AntiVirus_Scanner
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))));
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label10.Location = new System.Drawing.Point(89, 392);
+            this.label10.Location = new System.Drawing.Point(89, 407);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 20);
             this.label10.TabIndex = 11;
@@ -199,9 +201,9 @@ namespace AntiVirus_Scanner
             this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(300, 450);
+            this.listBox1.Location = new System.Drawing.Point(300, 505);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(487, 184);
+            this.listBox1.Size = new System.Drawing.Size(562, 204);
             this.listBox1.TabIndex = 12;
             // 
             // btnFullScan
@@ -274,13 +276,31 @@ namespace AntiVirus_Scanner
             this.btnScanDel.UseVisualStyleBackColor = false;
             this.btnScanDel.Click += new System.EventHandler(this.btnScanDel_Click);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))));
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label11.Location = new System.Drawing.Point(296, 482);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 23);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Virus List:";
+            // 
             // ScanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AntiVirus_Scanner.Properties.Resources.black_gradient_blue_copy;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(929, 646);
+            this.ClientSize = new System.Drawing.Size(1023, 721);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnScanDel);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnScan);
@@ -329,5 +349,7 @@ namespace AntiVirus_Scanner
         private System.Windows.Forms.Button btnScan;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Button btnScanDel;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label11;
     }
 }

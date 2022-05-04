@@ -173,6 +173,7 @@ namespace AntiVirus_Scanner
             this.lblCPUp.Size = new System.Drawing.Size(41, 25);
             this.lblCPUp.TabIndex = 10;
             this.lblCPUp.Text = "0%";
+            this.lblCPUp.Click += new System.EventHandler(this.lblCPUp_Click);
             // 
             // lblRamp
             // 

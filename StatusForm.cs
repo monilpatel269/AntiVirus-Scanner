@@ -88,5 +88,10 @@ namespace AntiVirus_Scanner
         {
 
         }
+
+        private void lblCPUp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
